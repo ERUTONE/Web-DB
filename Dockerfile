@@ -1,11 +1,10 @@
 FROM apache
-RUN apt-get update && \
-    apt-get install -y \
+RUN apt update \
+    && apt install -y
     wakeonlan \
     apache2 \
     php \
     libapache2-mod-php \
-    && rm -rf /var/lib/apt/lists/*
 RUN a2enmod rewrite
 WORKDIR /www/html
 COPY . /www/html/
