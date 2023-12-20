@@ -3,6 +3,8 @@ git clone コマンドで手元に落ちてくる
 ```
 git clone https://github.com/ERUTONE/WOL.git
 ```
+落とせたらdocker-compose.ymlを開いて
+
 
 docker composeで立ち上げる。 
 ```
