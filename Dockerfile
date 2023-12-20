@@ -1,4 +1,4 @@
-FROM apache
+FROM httpd
 RUN apt update \
     && apt install -y
     wakeonlan \
