@@ -1,8 +1,11 @@
 version: '3'
 services:
-  web:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    ports:
+  apache:
+    build: .
+    image: WOL
+    container_name: WOL
+    hostname: WOL
+    volumes:
+      - ./www:/var/www
+    ports:  
       - "8080:80"
