@@ -2,9 +2,9 @@ version: '3'
 services:
   apache:
     build: .
-    image: WOL
-    container_name: WOL
-    hostname: WOL
+    image: wol
+    container_name: wol
+    hostname: wol
     volumes:
       - ./www:/var/www
     ports:  
