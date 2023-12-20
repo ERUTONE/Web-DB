@@ -7,7 +7,7 @@ RUN apt-get update && \
     libapache2-mod-php \
     && rm -rf /var/lib/apt/lists/*
 RUN a2enmod rewrite
-WORKDIR /var/www/html
-COPY . /var/www/html/
+WORKDIR /www/html
+COPY . /www/html/
 EXPOSE 80
 CMD ["apache2ctl", "-D", "FOREGROUND"]
