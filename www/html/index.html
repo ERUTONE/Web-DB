@@ -6,27 +6,31 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
+    <!-- PC起動用スクリプトのフォーム -->
     <form id="run_script_form" method="post">
         <input type="submit" name="run_script" value="送信" style="width: 500px; height: 150px; font-size: 100px;">
     </form>
 
+    <!-- 起動確認用スクリプトのフォーム -->
     <form id="confirmation_form" method="post">
         <input type="submit" name="confirmation" value="起動確認" style="width: 500px; height: 150px; font-size: 100px;">
     </form>
 
     <script>
     $(document).ready(function(){
+        // PC起動用スクリプトのフォームが送信されたときの処理
         $("#run_script_form").submit(function(e){
             e.preventDefault();
             $.post("wakeonlan.php", function(data, status){
-                alert("返答: " + data + "通信: " + status);
+                alert("返答: " + data + " 通信: " + status);
             });
         });
 
+        // 起動確認用スクリプトのフォームが送信されたときの処理
         $("#confirmation_form").submit(function(e){
             e.preventDefault();
             $.post("ping.php", function(data, status){
-                alert("返答: " + data + "通信: " + status);
+                alert("返答: " + data + " 通信: " + status);
             });
         });
     });
