@@ -5,9 +5,9 @@ git clone https://github.com/ERUTONE/WOL.git
 ```
 落とせたらdocker-compose.ymlを開いてこの位置に**起動したいPCのIPアドレスとMACアドレスを記述しよう**
 ```
-environment:
-      ip_address: 192.168.1.1 # ここにIPアドレスを記述
-      mac_address: XX:XX:XX:XX:XX:XX # ここにMACアドレスを記述
+    environment:
+      - wakeonlan=wakeonlan -i 192.168.1.1 xx:xx:xx:xx:xx:xx
+      - ping=ping -c 1 192.168.1.1
 ```
 docker composeで立ち上げる。 
 ```
