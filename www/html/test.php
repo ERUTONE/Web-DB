@@ -17,22 +17,4 @@ if ($mac_address !== false) {
     echo "mac_address 環境変数は見つかりませんでした。\n";
 }
 
-// Retrieve and display the value of "mac_address"
-$mac_address = getenv("wakeonlan");
-
-if ($wakeonlan !== false) {
-    echo "wakeonlan: $mac_address\n";
-} else {
-    echo "wakeonlan 環境変数は見つかりませんでした。\n";
-}
-
-// Retrieve and display the value of "mac_address"
-$mac_address = getenv("ping");
-
-if ($mac_address !== false) {
-    echo "ping: $mac_address\n";
-} else {
-    echo "ping 環境変数は見つかりませんでした。\n";
-}
-
 ?>
