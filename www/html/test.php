@@ -1,11 +1,4 @@
 <?php
-$variables = getenv();
-
-// Display all environment variables
-foreach ($variables as $name => $value) {
-    echo "$name: $value\n";
-}
-
 // Retrieve and display the value of "ip_address"
 $ip_address = getenv("ip_address");
 
