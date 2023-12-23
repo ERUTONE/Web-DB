@@ -1,11 +1,8 @@
-FROM httpd
+FROM php:apache
 RUN apt-get update \
     && apt-get install -y
-    wakeonlan \
     iputils-ping \
-    apache2 \
-    php \
-    libapache2-mod-php \
+    wakeonlan \
 RUN a2enmod rewrite
 WORKDIR /www/html
 COPY . /www/html/
