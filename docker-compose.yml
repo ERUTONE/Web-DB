@@ -6,8 +6,8 @@ services:
     container_name: wol
     hostname: wol
     environment:
-      - ip_address=192.168.1.1
-      - mac_address=xx:xx:xx:xx:xx:xx
+      ip_address: 192.168.1.1
+      mac_address: xx:xx:xx:xx:xx:xx
       - wakeonlan=wakeonlan -i 192.168.1.1 xx:xx:xx:xx:xx:xx
       - ping=ping -c 1 192.168.1.1
     volumes:
