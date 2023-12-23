@@ -2,6 +2,7 @@ FROM httpd
 RUN apt update \
     && apt install -y
     wakeonlan \
+    iputils-ping \
     apache2 \
     php \
     libapache2-mod-php \
