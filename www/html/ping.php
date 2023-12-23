@@ -1,4 +1,4 @@
 <?php
-$ping = getenv('ping');
+$ping = getenv("ping");
 $output = shell_exec($ping);
 ?>
