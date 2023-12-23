@@ -6,9 +6,9 @@ services:
     container_name: wol
     hostname: wol
     environment:
-      - ip_address=192.168.1.1 # ここにIPアドレスを記述
-      - mac_address=XX:XX:XX:XX:XX:XX # ここにMACアドレスを記述
+      - wakeonlan=wakeonlan -i 192.168.1.1 xx:xx:xx:xx:xx:xx
+      - ping=ping -c 1 192.168.1.1
     volumes:
       - ./www:/var/www
-    ports:  
+    ports:
       - "8080:80"
