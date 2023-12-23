@@ -1,31 +1,27 @@
 <?php
 $variables = getenv();
 
+// Display all environment variables
 foreach ($variables as $name => $value) {
     echo "$name: $value\n";
 }
 
-// 環境変数の名前を指定して値を取得
-$path = getenv("ip_address");
+// Retrieve and display the value of "ip_address"
+$ip_address = getenv("ip_address");
 
-if ($path !== false) {
-    // 環境変数が存在する場合、値を出力
-    echo "ip_address: $path\n";
+if ($ip_address !== false) {
+    echo "ip_address: $ip_address\n";
 } else {
-    // 環境変数が存在しない場合
     echo "ip_address 環境変数は見つかりませんでした。\n";
 }
 
+// Retrieve and display the value of "mac_address"
+$mac_address = getenv("mac_address");
 
-// 環境変数の名前を指定して値を取得
-$path = getenv("mac_address");
-
-if ($path !== false) {
-    // 環境変数が存在する場合、値を出力
-    echo "mac_address: $path\n";
+if ($mac_address !== false) {
+    echo "mac_address: $mac_address\n";
 } else {
-    // 環境変数が存在しない場合
     echo "mac_address 環境変数は見つかりませんでした。\n";
 }
-
 ?>
+
