@@ -1,10 +1,3 @@
-FROM php:apache
-RUN apt-get update \
-    && apt-get install -y \
-    iputils-ping \
-    wakeonlan
-RUN a2enmod rewrite
-WORKDIR /www/html
-COPY . /www/html/
-EXPOSE 80
-CMD ["apache2ctl", "-D", "FOREGROUND"]
+FROM php:8.2.10-apache
+WORKDIR /var/www
+RUN apt update \
