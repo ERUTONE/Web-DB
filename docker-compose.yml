@@ -1,14 +1,8 @@
 version: '3'
 services:
-  apache:
-    build: .
-    image: wol
-    container_name: wol
-    hostname: wol
-    environment:
-      ip_address: 192.168.1.1
-      mac_address: xx:xx:xx:xx:xx:xx
-    volumes:
-      - ./html:/var/www/html
-    ports:
-      - "8080:80"
+    php:
+        build: php
+        volumes:
+            - ./html:/var/www/html
+        ports:
+            - 7890:80
