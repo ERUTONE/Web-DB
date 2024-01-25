@@ -9,4 +9,4 @@ docker composeで立ち上げる。
 docker compose up -d
 ```
 
-以下のリンクにアクセスします。 http://localhost:8675
+以下のリンクにアクセスします。 http://localhost:7890
