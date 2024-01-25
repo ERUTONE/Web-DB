@@ -1,7 +1,7 @@
 ローカルの落とし方
 git clone コマンドで手元に落ちてくる 
 ```
-git clone https://github.com/ERUTONE/php-bulletin-board.get
+git clone https://github.com/ERUTONE/php-bulletin-board.git
 
 ```
 docker composeで立ち上げる。 
