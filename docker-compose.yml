@@ -1,20 +1,27 @@
-version: '3'
 services:
-        php:
-            build: php
-        volumes:
-            - ./html:/var/www/html
-        ports:
-            - 7890:80
+  web:
+    build: ./apache
+    container_name: php-apache
+    tty: true
+    ports:
+      - "8080:80"
+    volumes:
+      - ./html:/var/www/html
+    depends_on:
+      - db
 
-        mysql:
-            image: mysql:5.7
-            environment:
-                MYSQL_ROOT_PASSWORD: root
-                MYSQL_DATABASE: db
-                MYSQL_USER: user
-                MYSQL_PASSWORD: password
-            volumes:
-                - ./mysql:/var/lib/mysql
-            ports:
-                - 3306:3306
+  db:
+    build: ./mariaDB
+    container_name: mariaDB
+    environment:
+      MYSQL_DATABASE: exampledb
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      TZ: "Asia/Tokyo"
+      LC_ALL: "C.UTF-8"
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
